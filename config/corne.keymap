@@ -21,19 +21,19 @@
 
         default_layer {
             bindings = <
-          &kp TAB   &kp Q   &kp W     &kp E   &kp R      &kp T          &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSPC
-       &kp LSHIFT   &kp A   &kp S     &kp D   &kp F      &kp G          &kp H   &kp J      &kp K     &kp L    &kp UP  &kp ENTER
- &kp LEFT_CONTROL   &kp Z   &kp X     &kp C   &kp V      &kp B          &kp N   &kp M  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
-                                   &kp LGUI   &mo 1  &kp SPACE  &kp RIGHT_ALT   &mo 2  &kp SPACE
+          &kp TAB   &kp Q   &kp W     &kp E   &kp R      &kp T     &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSPC
+       &kp LSHIFT   &kp A   &kp S     &kp D   &kp F      &kp G     &kp H   &kp J      &kp K     &kp L    &kp UP  &kp ENTER
+ &kp LEFT_CONTROL   &kp Z   &kp X     &kp C   &kp V      &kp B     &kp N   &kp M  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
+                                   &kp LGUI   &mo 1  &kp SPACE  &kp RALT   &mo 2  &kp SPACE
             >;
         };
 
         layer_raise {
             bindings = <
-    &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8  &kp N9       &kp N0  &kp MINUS
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF           &trans  &trans       &trans   &kp PLUS
-     &reset   &bootloader        &trans        &trans        &trans             &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR           &trans  &trans  &bootloader     &reset
-                                               &trans        &trans  &ext_power EP_TOG           &trans           &trans  &rgb_ug RGB_TOG
+     &trans        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7  &kp N8  &kp N9       &kp N0  &trans
+ &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans  &trans       &trans  &trans
+     &reset   &bootloader        &trans        &trans        &trans             &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &trans  &trans  &bootloader  &reset
+                                               &trans        &trans  &ext_power EP_TOG  &rgb_ug RGB_TOG           &trans  &trans
             >;
         };
 
