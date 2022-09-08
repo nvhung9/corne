@@ -39,10 +39,10 @@
 
         layer_lower {
             bindings = <
- &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR     &trans
- &trans    &trans  &trans    &trans    &trans     &trans  &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
- &trans    &trans  &trans    &trans    &trans     &trans  &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans     &trans    &kp END     &trans         &kp HOME
+ &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS   &kp KP_MULTIPLY           &kp LPAR     &kp RPAR       &kp DELETE
+ &kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6       &kp F7         &kp F8            &kp F9            &kp F10      &kp F11          &kp F12
+ &trans    &trans  &trans    &trans    &trans     &trans  &kp PAGE_UP  &kp PAGE_DOWN  &kp K_CALCULATOR  &kp K_VOLUME_DOWN  &kp C_PAUSE  &kp C_VOLUME_UP
+                             &trans    &trans     &trans      &kp END         &trans          &kp HOME
             >;
         };
     };
