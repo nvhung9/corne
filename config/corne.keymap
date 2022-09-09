@@ -32,7 +32,7 @@
             bindings = <
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
    &mo 3  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF         &kp PIPE  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
-  &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR           &trans      &kp COMMA           &kp DOT     &trans
+  &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR     &kp QUESTION      &kp COMMA           &kp DOT     &trans
                                             &trans        &trans  &ext_power EP_TOG           &reset      &bootloader  &rgb_ug RGB_TOG
             >;
         };
@@ -48,10 +48,10 @@
 
         Layer_SHIFT {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans  &trans  &trans  &trans
+ &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY       &kp LPAR           &kp RPAR  &kp UNDERSCORE
+    &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans      &kp COLON  &kp DOUBLE_QUOTES        &kp PLUS
+    &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &kp LESS_THAN   &kp GREATER_THAN          &trans
+                                &trans    &trans     &trans     &trans    &trans           &trans
             >;
         };
     };
