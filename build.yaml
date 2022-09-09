@@ -10,7 +10,7 @@
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
-#
+# nrfmicro_13
 ---
 include:
   - board: nrfmicro_13
