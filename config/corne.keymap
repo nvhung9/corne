@@ -40,9 +40,9 @@
         layer_lower {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8               &kp F9            &kp F10           &kp F11       &kp DELETE
- &trans  &trans  &trans  &trans  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &kp F12       &kp INSERT
- &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY  &kp C_VOLUME_UP
-                         &trans  &trans  &trans     &bootloader     &trans          &reset
+ &trans  &trans  &trans  &trans  &trans  &trans   &rgb_ug RGB_TOG    &kp END               &trans             &trans           &kp F12       &kp INSERT
+ &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
+                         &trans  &trans  &trans     &kp HOME     &trans          &kp END
             >;
         };
 
