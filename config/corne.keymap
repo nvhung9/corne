@@ -44,7 +44,7 @@
         layer_raise {
             bindings = <
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
-   &mo 3  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF         &kp PIPE  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
+   &mo 3  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
   &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR     &kp QUESTION      &kp COMMA           &kp DOT     &trans
                                             &trans        &trans  &ext_power EP_TOG           &rgb_ug RGB_TOG      &bootloader  &reset
             >;
@@ -62,7 +62,7 @@
         Layer_SHIFT {
             bindings = <
        &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY       &kp LPAR           &kp RPAR  &kp UNDERSCORE
-          &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans      &kp COLON  &kp DOUBLE_QUOTES        &kp PLUS
+          &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &kp PIPE      &kp COLON  &kp DOUBLE_QUOTES        &kp PLUS
  &kp PRINTSCREEN    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &kp LESS_THAN   &kp GREATER_THAN    &kp CAPSLOCK
                                       &trans    &trans     &trans     &trans    &trans           &trans
             >;
