@@ -37,7 +37,7 @@
    &kp TAB   &kp Q   &kp W     &kp E   &kp R           &kp T            &kp Y   &kp U        &kp I     &kp O     &kp P  &kp BACKSPACE
  &kp LSHFT   &kp A   &kp S     &kp D   &kp F           &kp G            &kp H   &kp J        &kp K     &kp L    &kp UP      &kp ENTER
  &kp LCTRL   &kp Z   &kp X     &kp C   &kp V           &kp B            &kp N   &kp M    &kp SLASH  &kp LEFT  &kp DOWN      &kp RIGHT
-                            &kp LGUI   &mo 1  &hm LALT SPACE  &hm RALT INSERT   &mo 2  &lt 4 SPACE
+                            &kp LGUI   &mo 1  &hm LALT SPACE  &lt 4 SPACE   &mo 2  &hm RALT INSERT
             >;
         };
 
@@ -46,7 +46,7 @@
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
    &mo 3  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
   &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR     &kp QUESTION      &kp COMMA           &kp DOT     &trans
-                                            &trans        &trans  &ext_power EP_TOG           &reset      &bootloader  &rgb_ug RGB_TOG
+                                            &trans        &trans  &ext_power EP_TOG           &rgb_ug RGB_TOG      &bootloader  &reset
             >;
         };
 
@@ -55,7 +55,7 @@
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8               &kp F9            &kp F10           &kp F11       &kp DELETE
  &trans  &trans  &trans  &trans  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &kp F12       &kp INSERT
  &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
-                         &trans  &trans  &trans    &kp END     &trans             &kp HOME
+                         &trans  &trans  &trans    &kp HOME     &trans             &kp END
             >;
         };
 
@@ -64,7 +64,7 @@
        &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY       &kp LPAR           &kp RPAR  &kp UNDERSCORE
           &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans         &kp PIPE      &kp COLON  &kp DOUBLE_QUOTES        &kp PLUS
  &kp PRINTSCREEN    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &kp LESS_THAN   &kp GREATER_THAN    &kp CAPSLOCK
-                                      &trans    &trans     &trans   &kp RBKT  &kp LBKT           &trans
+                                      &trans    &trans     &trans   &trans  &kp LBKT           &kp RBKT
             >;
         };
 
