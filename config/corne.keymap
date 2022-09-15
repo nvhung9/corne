@@ -38,7 +38,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <LOWER RISE>;
+            if-layers = <LOWER RAISE>;
             then-layer = <OPTION>;
         };
     };
