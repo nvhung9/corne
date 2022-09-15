@@ -15,6 +15,11 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define LOWER 1
+#define RAISE 2
+#define SHIFT 3
+#define OPTION 4
+#define LOCK 5
 / {
     behaviors {
         hm: homerow_mods {
@@ -84,6 +89,7 @@
  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
                          &none  &none  &none  &none  &none  &none
             >;
+    };
         // The Lower+Raise+Backspace binding toggles a "soft lock" mode that effective disables
         // other keys, allowing the keyboard to be transported without spurious key presses. (Note
         // that the Lower, Raise, and Backspace positions must be bound to &trans to allow the lock
@@ -99,5 +105,4 @@
                                                             &none      &trans     &none      &none      &trans     &none
             >;
         };
-    };
 };
