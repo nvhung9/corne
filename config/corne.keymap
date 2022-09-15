@@ -19,7 +19,7 @@
 #define RAISE 2
 #define SHIFT 3
 #define OPTION 4
-#define LOCK 4
+#define LOCK 5
 
 / {
     behaviors {
