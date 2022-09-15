@@ -59,8 +59,8 @@
             bindings = <
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
    &mo 3  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
-  &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR     &kp QUESTION      &kp COMMA           &kp DOT     &trans
-                                            &trans        &trans  &ext_power EP_TOG           &rgb_ug RGB_TOG      &trans  &reset
+  &reset    &bt BT_CLR        &trans        &trans        &trans        &bootloader  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR     &kp QUESTION      &kp COMMA           &kp DOT     &reset
+                                            &trans        &trans  &ext_power EP_TOG           &rgb_ug RGB_TOG      &trans  &bootloader
             >;
         };
 
@@ -87,16 +87,10 @@
  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &kp C_BRI_DN    &kp C_BRI_UP     &to 5
  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp C_PREV            &kp C_NEXT       &out OUT_TOG
  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
-                         &trans  &trans  &trans  &trans  &trans  &bootloader
+                         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-                // The Lower+Raise+Backspace binding toggles a "soft lock" mode that effective disables
-        // other keys, allowing the keyboard to be transported without spurious key presses. (Note
-        // that the Lower, Raise, and Backspace positions must be bound to &trans to allow the lock
-        // layer to be toggled again after it's activated.)
-        //
-        // If https://github.com/zmkfirmware/zmk/issues/405 is implemented, this layer can be
-        // replaced by a native behavior in the future.
+                // 3 phim Lower+Raise+Backspace bat che do khoa phim
         lock_layer {
             bindings = <
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &trans
