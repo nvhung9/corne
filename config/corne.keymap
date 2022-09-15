@@ -76,13 +76,5 @@
                          &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-        Layer_lock {
-            bindings = <
- &none  &none  &none  &none  &none  &none  &none  &none  &none       &none    &none     &trans
- &none  &none  &none  &none  &none  &none  &none  &none  &none         &none            &none       &none
- &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                         &none  &trans  &none  &none  &trans  &none
-            >;
-        };
     };
 };
