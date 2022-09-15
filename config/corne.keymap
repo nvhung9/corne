@@ -15,6 +15,12 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define LOWER 1
+#define RAISE 2
+#define SHIFT 3
+#define OPTION 4
+#define LOCK 4
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -26,6 +32,15 @@
             bindings =
                 <&kp>,
                 <&kp>;
+        };
+    };
+    
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <OPTION>;
         };
     };
 
@@ -70,10 +85,24 @@
 
         Layer_option {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &kp C_BRI_DN    &kp C_BRI_AUTO     &kp C_BRI_UP
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp C_PREV            &trans       &kp C_NEXT
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
-                         &trans  &trans  &trans  &trans  &trans  &trans
+ &none  &none  &none  &none  &none  &none  &none  &none  &none       &kp C_BRI_DN    &kp C_BRI_UP     &tog LOCK
+ &none  &none  &none  &none  &to 0  &none  &none  &none  &none         &kp C_PREV            &kp C_NEXT       &out OUT_TOG
+ &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                         &none  &none  &none  &none  &none  &none
+            >;
+        // The Lower+Raise+Backspace binding toggles a "soft lock" mode that effective disables
+        // other keys, allowing the keyboard to be transported without spurious key presses. (Note
+        // that the Lower, Raise, and Backspace positions must be bound to &trans to allow the lock
+        // layer to be toggled again after it's activated.)
+        //
+        // If https://github.com/zmkfirmware/zmk/issues/405 is implemented, this layer can be
+        // replaced by a native behavior in the future.
+        lock_layer {
+            bindings = <
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &trans
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                                                            &none      &trans     &none      &none      &trans     &none
             >;
         };
     };
