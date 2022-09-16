@@ -96,7 +96,7 @@
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &tog LOCK
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
                 &none      &none      &none      &none      &none      &none                            &to 0      &none      &none      &none      &none      &none
-                                                            &none      &trans     &none      &none      &trans     &none
+                                                            &none      &mo LOWER      &none      &none      &mo RAISE     &none
             >;
         };
     };
