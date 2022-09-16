@@ -93,9 +93,9 @@
                 // 3 phim Lower+Raise+Backspace bat che do khoa phim
         lock_layer {
             bindings = <
-                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &trans
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &tog LOCK
                 &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
-                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                &none      &none      &none      &none      &none      &none                            &to 0      &none      &none      &none      &none      &none
                                                             &none      &trans     &none      &none      &trans     &none
             >;
         };
