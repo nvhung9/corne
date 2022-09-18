@@ -5,9 +5,9 @@ manifest:
     - name: nvhung9
       url-base: https://github.com/nvhung9
   projects:
-    - name: zmk
-      remote: nguyendown
-      revision: cresk
+    - name: corne
+      remote: nvhung9
+      revision: corne
       import: app/west.yml
   self:
     path: config
