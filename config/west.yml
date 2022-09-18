@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: petejohanson
       url-base: https://github.com/petejohanson
-    - name: Deemen17
-      url-base: https://github.com/Deemen17
+    - name: nvhung9
+      url-base: https://github.com/nvhung9
 
   projects:
     # - name: zmk
@@ -14,8 +14,8 @@ manifest:
     #   import: app/west.yml
 
     - name: zmk
-      remote: Deemen17
-      revision: display/bongo-cat-widget
+      remote: nvhung9
+      revision: corne
       import: app/west.yml
 
   self:
