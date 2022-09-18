@@ -15,7 +15,7 @@ manifest:
 
     - name: zmk
       remote: nvhung9
-      revision: corne
+      revision: zmk-config
       import: app/west.yml
 
   self:
