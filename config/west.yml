@@ -2,10 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: nguyendown
+      url-base: https://github.com/nguyendown
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: nguyendown
+      revision: cresk
       import: app/west.yml
   self:
     path: config
