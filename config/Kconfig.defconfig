@@ -1,34 +1,35 @@
-# Copyright (c) 2022 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-if SHIELD_CORNE
+if SHIELD_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "HUNG_CORNE"
+	default "Hung Corne"
 
-config ZMK_KSCAN_MATRIX_POLLING
+config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-config ZMK_KSCAN_DIRECT_POLLING
-    default y
+endif
+
+if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+
+config ZMK_SPLIT
+	default y
 
 if ZMK_DISPLAY
 
 config I2C
-    default y
+	default y
 
 config SSD1306
-    default y
+	default y
 
 config SSD1306_REVERSE_MODE
-    default y
+	default y
 
 endif # ZMK_DISPLAY
 
 if LVGL
 
 config LVGL_VDB_SIZE
-	default 100
+	default 64
 
 config LVGL_DPI
 	default 148
@@ -42,4 +43,4 @@ endchoice
 
 endif # LVGL
 
-endif # SHIELD_CORNE
+endif
