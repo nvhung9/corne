@@ -1,7 +1,7 @@
 if SHIELD_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Hung Corne"
+	default "HungCorne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
