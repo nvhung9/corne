@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/nguyendown
   projects:
     - name: zmk
-      remote: nguyendown
-      revision: cresk
+      remote: nvhung9
+      revision: main
       import: app/west.yml
   self:
     path: config
