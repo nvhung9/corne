@@ -9,7 +9,7 @@ manifest:
   projects:
     - name: corne
       remote: nvhung9
-      revision: master
+      revision: main
       import: app/west.yml
   self:
     path: config
