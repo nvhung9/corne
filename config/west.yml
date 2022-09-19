@@ -7,9 +7,9 @@ manifest:
     - name: nguyendown
       url-base: https://github.com/nguyendown
   projects:
-    - name: corne
-      remote: nvhung9
-      revision: main
+    - name: zmk
+      remote: nguyendown
+      revision: cresk
       import: app/west.yml
   self:
     path: config
