@@ -13,15 +13,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
-
+#include <dt-bindings/zmk/outputs.h>
 #define LOWER 1
 #define RAISE 2
 #define SHIFT 3
 #define OPTION 4
 #define LOCK 5
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -35,7 +34,7 @@
                 <&kp>;
         };
     };
-
+    
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -44,7 +43,7 @@
             then-layer = <OPTION>;
         };
     };
-
+	
     macros {
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
@@ -52,41 +51,35 @@
             #binding-cells = <0>;
             bindings = <&kp P &kp DOT &kp T &kp KP_MULTIPLY &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_1 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_9 &kp NUMBER_9 &kp NUMBER_0 &kp NUMBER_2 &kp PLUS &kp T &kp DOT &kp T &kp KP_MULTIPLY &kp PLUS &kp R &kp DOT &kp H>;
         };
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings = <&kp A>;
-        };
     };
-
+    
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-   &kp TAB   &kp Q   &kp W     &kp E   &kp R           &kp T             &kp Y   &kp U           &kp I     &kp O     &kp P  &kp BACKSPACE
- &kp LSHFT   &kp A   &kp S     &kp D   &kp F           &kp G             &kp H   &kp J           &kp K     &kp L    &kp UP      &kp ENTER
- &kp LCTRL   &kp Z   &kp X     &kp C   &kp V           &kp B             &kp N   &kp M       &kp SLASH  &kp LEFT  &kp DOWN      &kp RIGHT
-                            &kp LGUI   &mo 1  &hm LALT SPACE  &hm RCTRL INSERT   &mo 2  &hm RALT SPACE
+   &kp TAB   &kp Q   &kp W     &kp E   &kp R           &kp T            &kp Y   &kp U        &kp I     &kp O     &kp P  &kp BACKSPACE
+ &kp LSHFT   &kp A   &kp S     &kp D   &kp F           &kp G            &kp H   &kp J        &kp K     &kp L    &kp UP      &kp ENTER
+ &kp LCTRL   &kp Z   &kp X     &kp C   &kp V           &kp B            &kp N   &kp M    &kp SLASH  &kp LEFT  &kp DOWN      &kp RIGHT
+                            &kp LGUI   &mo LOWER  &hm LALT SPACE  &hm RALT SPACE   &mo RAISE  &hm RCTRL INSERT
             >;
         };
 
         layer_raise {
             bindings = <
- &kp ESC   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7        &kp N8         &kp N9            &kp N0  &kp MINUS
-   &mo 3  &macro1  &trans  &trans  &trans  &trans  &trans  &trans      &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
-  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp QUESTION      &kp COMMA           &kp DOT     &trans
-                           &trans  &trans  &trans  &trans  &trans        &trans
+ &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
+   &mo SHIFT  &macro1  &trans  &trans  &trans       &trans  &trans  &trans         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
+  &trans    &trans        &trans        &trans        &trans        &trans  &trans  &trans     &kp QUESTION      &kp COMMA           &kp DOT     &trans
+                                            &trans        &trans  &trans           &trans      &trans  &trans
             >;
         };
 
         layer_lower {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8               &kp F9            &kp F10           &kp F11       &kp DELETE
- &trans  &trans  &trans  &trans  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &kp F12       &kp INSERT
- &trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
-                         &trans  &trans  &trans    &kp END     &trans             &kp HOME
+ &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &kp C_AL_TASK_MANAGER               &trans            &trans           &trans       &kp DELETE
+ &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &trans       &kp INSERT
+ &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
+                         &trans  &trans  &trans    &kp HOME     &trans             &kp END
             >;
         };
 
@@ -95,27 +88,25 @@
        &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY       &kp LPAR           &kp RPAR  &kp UNDERSCORE
           &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans         &kp PIPE      &kp COLON  &kp DOUBLE_QUOTES        &kp PLUS
  &kp PRINTSCREEN    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &kp LESS_THAN   &kp GREATER_THAN    &kp CAPSLOCK
-                                      &trans    &trans     &trans   &kp RBKT    &trans         &kp LBKT
+                                      &trans    &trans     &trans   &kp LBKT  &trans           &kp RBKT
             >;
         };
 
         Layer_option {
             bindings = <
- &bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &bt BT_SEL 4       &trans  &trans           &trans       &kp C_BRI_DN      &kp C_BRI_UP           &tog 5
-     &trans  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF    &rgb_ug RGB_BRI       &trans  &trans           &trans         &kp C_PREV        &kp C_NEXT     &out OUT_TOG
-     &reset  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_EFR    &rgb_ug RGB_BRD       &reset  &trans           &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
-                                                   &bootloader           &trans  &ext_power EP_TOG  &bootloader  &trans  &rgb_ug RGB_TOG
+ &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans       &kp C_BRI_DN    &kp C_BRI_UP     &tog LOCK
+ &trans  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &trans  &trans  &trans         &kp C_PREV            &kp C_NEXT       &out OUT_TOG
+ &reset  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &reset  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
+                         &bootloader  &trans  &ext_power EP_TOG  &rgb_ug RGB_TOG  &trans  &bootloader
             >;
         };
-
-        // 3 phim Lower+Raise+Backspace bat/tat che do khoa phim
-
+                // 3 phim Lower+Raise+Backspace bat/tat che do khoa phim
         lock_layer {
             bindings = <
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none  &trans
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-                          &none  &trans   &none   &none  &trans   &none
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &trans
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                &none      &none      &none      &none      &none      &none                            &none      &none      &none      &none      &none      &none
+                                                            &none      &trans     &none      &none      &trans     &none
             >;
         };
     };
