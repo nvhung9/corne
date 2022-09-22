@@ -52,6 +52,12 @@
             #binding-cells = <0>;
             bindings = <&kp P &kp DOT &kp T &kp KP_MULTIPLY &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_1 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_9 &kp NUMBER_9 &kp NUMBER_0 &kp NUMBER_2 &kp PLUS &kp T &kp DOT &kp T &kp KP_MULTIPLY &kp PLUS &kp R &kp DOT &kp H>;
         };
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings = <&kp A>;
+        };
     };
 
     keymap {
