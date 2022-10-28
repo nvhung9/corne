@@ -65,16 +65,16 @@
             >;
         };
 
-        layer_raise {
+        layer_lower {
             bindings = <
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
    &mo SHIFT  &macro1  &trans  &trans  &trans       &trans  &trans  &trans         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
-  &trans    &trans        &trans        &trans        &trans        &trans  &trans  &trans     &kp QUESTION      &kp COMMA           &kp DOT     &trans
+  &trans    &trans        &trans        &kp C_AC_SCROLL_UP        &kp C_AC_SCROLL_DOWN        &trans  &trans  &trans     &kp QUESTION      &kp COMMA           &kp DOT     &trans
                                             &trans        &trans  &trans           &trans      &trans  &trans
             >;
         };
 
-        layer_lower {
+        layer_raise {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &kp C_AL_TASK_MANAGER               &trans            &trans           &trans       &kp DELETE
  &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &trans       &kp INSERT
