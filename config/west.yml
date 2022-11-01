@@ -6,10 +6,12 @@ manifest:
       url-base: https://github.com/nvhung9
     - name: nguyendown
       url-base: https://github.com/nguyendown
+    - name: ftc
+      url-base: https://github.com/ftc
   projects:
     - name: zmk
-      remote: nguyendown
-      revision: cresk
+      remote: ftc
+      revision: mouse-ftc
       import: app/west.yml
   self:
     path: config
