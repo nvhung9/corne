@@ -25,8 +25,8 @@
 #define OPTION 4
 #define LOCK 5
 &mmv {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
+        time-to-max-speed-ms = <1000>;
+        acceleration-exponent=<1>;
 };
 &mwh {    
         time-to-max-speed-ms = <2000>;
@@ -87,7 +87,7 @@
 
         layer_raise {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &trans               &trans            &trans           &kp PAUSE_BREAK       &kp DELETE
+ &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &kp LANG1     &kp LANG2               &trans            &trans           &kp PAUSE_BREAK       &kp DELETE
  &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &trans       &kp K_CMENU
  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
                          &trans  &trans  &trans    &kp HOME     &trans             &kp END
