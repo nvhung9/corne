@@ -81,7 +81,7 @@
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
    &mo SHIFT  &mmv MOVE_HOR(-1500)  &mmv MOVE_VERT(1500)       &mmv MOVE_VERT(-1500)  &mmv MOVE_HOR(1500)  &mkp LCLK  &mkp RCLK  &mkp MCLK         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
   &trans    &mwh SCROLL_HOR(-15)        &mwh SCROLL_HOR(15)        &mwh SCROLL_VERT(-15)        &mwh SCROLL_VERT(15)        &trans  &trans  &trans     &kp QUESTION      &kp COMMA           &kp DOT     &trans
-                                            &trans        &trans  &trans           &trans      &trans  &trans
+                                            &trans        &trans  &trans           &kp LEFT_BRACE      &trans  &kp RIGHT_BRACE
             >;
         };
 
