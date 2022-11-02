@@ -87,8 +87,8 @@
 
         layer_raise {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &kp C_AL_TASK_MANAGER               &trans            &trans           &trans       &kp DELETE
- &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &trans       &kp INSERT
+ &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &trans               &trans            &trans           &trans       &kp DELETE
+ &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans   &kp HOME    &kp END               &trans             &trans           &trans       &kp K_MENU
  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp PG_UP  &kp PG_DN  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP
                          &trans  &trans  &trans    &kp HOME     &trans             &kp END
             >;
