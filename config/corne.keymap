@@ -55,14 +55,15 @@
             bindings = <&kp P &kp DOT &kp T &kp KP_MULTIPLY &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_1 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_9 &kp NUMBER_9 &kp NUMBER_0 &kp NUMBER_2 &kp PLUS &kp T &kp DOT &kp T &kp KP_MULTIPLY &kp PLUS &kp R &kp DOT &kp H>;
         };
     };
-    &mmv {
-        time-to-max-speed-ms = <500>;
+    &mmv {    
+            time-to-max-speed-ms = <500>;
+            acceleration-exponent=<1>;
     };
-
-    &mwh {
-        acceleration-exponent=<1>;
-    };
-
+    &mwh {    
+            time-to-max-speed-ms = <2000>;
+            acceleration-exponent=<0>;
+    }; 
+    
     keymap {
         compatible = "zmk,keymap";
 
