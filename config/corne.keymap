@@ -76,16 +76,16 @@
                             &kp LGUI   &mo LOWER  &hm LALT SPACE  &kp SPACE   &mo RAISE  &hm RCTRL INSERT
             >;
         };
-
+		// number and mouse keys
         layer_lower {
             bindings = <
  &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4             &kp N5           &kp N6           &kp N7           &kp N8         &kp N9            &kp N0  &kp MINUS
-   &mo SHIFT  &mwh SCROLL_VERT(-15)  &mwh SCROLL_VERT(15)       &mmv MOVE_VERT(-1500)  &mkp LCLK  &mkp RCLK  &mkp RCLK  &mkp MCLK         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
+   &mo SHIFT  &mwh SCROLL_VERT(-15)  &mwh SCROLL_VERT(15)       &mmv MOVE_VERT(-1500)  &mkp LCLK  &mkp RCLK  &mkp LCLK  &mkp MCLK         &kp BSLH  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp EQUAL
   &trans    &mwh SCROLL_HOR(-15)        &mmv MOVE_HOR(-1500)        &mmv MOVE_VERT(1500)        &mmv MOVE_HOR(1500)        &mwh SCROLL_HOR(15)  &trans  &trans     &kp QUESTION      &kp COMMA           &kp DOT     &trans
                                             &trans        &trans  &trans           &kp LEFT_BRACE      &trans  &kp RIGHT_BRACE
             >;
         };
-
+		// F key and media
         layer_raise {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans     &trans     &trans               &trans            &trans           &kp PAUSE_BREAK       &kp DELETE
@@ -94,7 +94,7 @@
                          &trans  &trans  &trans    &kp HOME     &trans             &kp END
             >;
         };
-
+		// symbol
         Layer_SHIFT {
             bindings = <
        &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY       &kp LPAR           &kp RPAR  &kp UNDERSCORE
