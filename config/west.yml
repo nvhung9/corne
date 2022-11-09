@@ -4,16 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: nvhung9
       url-base: https://github.com/nvhung9
-    - name: nguyendown
-      url-base: https://github.com/nguyendown
-    - name: ftc
-      url-base: https://github.com/ftc
-    - name: infused-kim
-      url-base: https://github.com/infused-kim
   projects:
     - name: zmk
-      remote: ftc
-      revision: mouse-ftc
+      remote: nvhung9
+      revision: main
       import: app/west.yml
   self:
     path: config
